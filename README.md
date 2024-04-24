@@ -1,4 +1,5 @@
-Game_Minesweeper
+#Game_Minesweeper
+
 Introduction
 This repository contains a Minesweeper game implemented in C++. The game utilizes principles of object-oriented programming (OOP), making extensive use of classes to encapsulate game functionalities. It features dynamic memory management and utilizes the C++ Standard Library's random number generation to place mines randomly on the game board.
 
