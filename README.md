@@ -31,4 +31,4 @@ Win the Game: Clear all cells without mines to win.
 Contributions to this project are welcome! Please feel free to fork the repository, make changes, and submit pull requests. You can also send me an email if you have any questions or suggestions.
 
 ## Contact
-For any issues, questions, or contributions, please contact your email.
+For any issues, questions, or contributions, please contact mk7545@nyu.edu.
