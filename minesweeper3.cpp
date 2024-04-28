@@ -180,7 +180,7 @@ int main() {
                         cout << "Enter custom grid size (6~25): ";
                         cin >> width;
                         height = width;
-                        cout << "Number of mines (integer division of total squares by 6): ";
+                        cout << "Number of mines (integer division of total squares by 6):" <<endl;
                         mines = (width * height) / 6;
                         break;
                     default:
