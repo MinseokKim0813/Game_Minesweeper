@@ -13,7 +13,7 @@ This repository contains a Minesweeper game implemented in C++. The game utilize
 To compile and run the Minesweeper game, you will need a C++ compiler that supports C++11 or later. Follow these steps:
 
 1. Clone the repository to your local machine:
-   git clone https://github.com/yourusername/Game_Minesweeper.git
+   git clone https://github.com/Minseokkim0813/Game_Minesweeper.git
 2. Navigate to the directory containing the game:
    cd Game_Minesweeper
 3. Compile the game using a C++ compiler, for example g++:
