@@ -292,7 +292,7 @@ int main()
                     cout << "Enter row and column number to select the square: ";
                     int x, y;
                     cin >> x >> y;
-                    while (x < 0 || x > width || y < 0 || y > height)
+                    while (x < 0 || x > (width-1) || y < 0 || y > (height-1))
                         {
                             cout << "Invalid choice. Please select again: ";
                             cin >> x >> y;
@@ -312,7 +312,7 @@ int main()
                 case 2:
                     cout << "Enter row and column numbers to flag/unflag: ";
                     cin >> x >> y;
-                    while (x < 0 || x > width || y < 0 || y > height)
+                    while (x < 0 || x > (width-1) || y < 0 || y > (height-1))
                         {
                             cout << "Invalid choice. Please select again: ";
                             cin >> x >> y;
