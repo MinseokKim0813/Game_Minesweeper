@@ -260,7 +260,7 @@ int main()
                 mines = 104;
                 break;
             case 4:
-                cout << "Enter custom grid size (6~25): ";
+                cout << " Please enter the row/column (6~25): "<<endl;
                 cin >> width;
                     while (width < 6 || width > 25)
                         {
@@ -289,7 +289,7 @@ int main()
                 switch (choice)
                 {
                 case 1:
-                    cout << "Enter row and column numbers: ";
+                    cout << "Enter row and column number to select the square: ";
                     int x, y;
                     cin >> x >> y;
                     while (x < 0 || x > width || y < 0 || y > height)
