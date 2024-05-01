@@ -13,6 +13,73 @@ private:
     int width, height, mines;
     int remainingSafeSquares; // Variable to track remaining non-mine squares
 
+public:
+    // check if the selected land is within the grid
+    bool isValid(int x, int y)
+    {
+        if (x >= 0 && x < width && y >= 0 && y < height)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    // Constructor to initialize the game with given dimensions and number of mines
+    Minesweeper(int w, int h, int m)
+    {
+        width = w;
+        height = h;
+        mines = m;
+        remainingSafeSquares = 0;
+
+        // dynamic 2d arrays initialization
+        // array of int pointers
+        grid = new int *[height];
+        // array of bool pointers
+        revealed = new bool *[height];
+        // array of bool pointers
+        flagged = new bool *[height];
+
+        // for each row
+        for (int i = 0; i < height; i++)
+        {
+            // each row contains another array
+            grid[i] = new int[width];
+            revealed[i] = new bool[width];
+            flagged[i] = new bool[width];
+
+            // for each column
+            for (int j = 0; j < width; j++)
+            {
+                // set every element to default values
+                grid[i][j] = 0;
+                revealed[i][j] = false;
+                flagged[i][j] = false;
+            }
+        }
+
+        // randomly place mines on the grid
+        placeMines();
+    }
+
+    // destructor
+    ~Minesweeper()
+    {
+        // deallocate each row array
+        for (int i = 0; i < height; i++)
+        {
+            delete[] grid[i];
+            delete[] revealed[i];
+            delete[] flagged[i];
+        }
+
+        // deallocate the array itself
+        delete[] grid;
+        delete[] revealed;
+        delete[] flagged;
+    }
+
     // randomly place mines on the grid
     // randomly generate x and y coordinates
     // then check if the land already has mine or not
@@ -84,73 +151,6 @@ private:
         }
 
         return count;
-    }
-
-public:
-    // check if the selected land is within the grid
-    bool isValid(int x, int y)
-    {
-        if (x >= 0 && x < width && y >= 0 && y < height)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    // Constructor to initialize the game with given dimensions and number of mines
-    Minesweeper(int w, int h, int m)
-    {
-        width = w;
-        height = h;
-        mines = m;
-        remainingSafeSquares = 0;
-
-        // dynamic 2d arrays initialization
-        // array of int pointers
-        grid = new int *[height];
-        // array of bool pointers
-        revealed = new bool *[height];
-        // array of bool pointers
-        flagged = new bool *[height];
-
-        // for each row
-        for (int i = 0; i < height; i++)
-        {
-            // each row contains another array
-            grid[i] = new int[width];
-            revealed[i] = new bool[width];
-            flagged[i] = new bool[width];
-
-            // for each column
-            for (int j = 0; j < width; j++)
-            {
-                // set every element to default values
-                grid[i][j] = 0;
-                revealed[i][j] = false;
-                flagged[i][j] = false;
-            }
-        }
-
-        // randomly place mines on the grid
-        placeMines();
-    }
-
-    // destructor
-    ~Minesweeper()
-    {
-        // deallocate each row array
-        for (int i = 0; i < height; i++)
-        {
-            delete[] grid[i];
-            delete[] revealed[i];
-            delete[] flagged[i];
-        }
-
-        // deallocate the array itself
-        delete[] grid;
-        delete[] revealed;
-        delete[] flagged;
     }
 
     // displaying the grid
