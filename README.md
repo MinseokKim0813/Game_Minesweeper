@@ -70,4 +70,4 @@ Through this project, we gained insights into:
 - Enhancing problem-solving skills as a team.
 - Expressing creativity through innovative game features.
 
-Thank you for choosing Minesweeper Mania! We hope you enjoy playing the game as much as we enjoyed creating it. If you have any feedback or suggestions, feel free to reach out. Happy sweeping!
+Thank you for choosing Minesweeper Mania! We hope you enjoy playing the game as much as we enjoyed creating it. If you have any feedback or suggestions, feel free to reach out to mk7545@nyu.edu, djt8777@nyu.edu, or tc3857@nyu.edu. Happy mining!
